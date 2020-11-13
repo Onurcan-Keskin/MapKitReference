@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Library Dialog -->
+<!DOCTYPE resources[
+    <!ENTITY ver "Version:">
+    <!ENTITY web "Website:">
+    <!ENTITY app_version "1.0">
+    <!ENTITY hms_agcCore "1.4.0.300">
+    <!ENTITY hms_maps "5.0.1.300"><!ENTITY hms_maps_url "https://developer.huawei.com/consumer/en/hms/huawei-MapKit" >
+    <!ENTITY hms_site "5.0.1.300"><!ENTITY hms_site_url "https://developer.huawei.com/consumer/en/hms/huawei-sitekit" >
+    <!ENTITY hms_location "5.0.2.301"><!ENTITY hms_location_url "https://developer.huawei.com/consumer/en/hms/huawei-locationkit">
+    <!ENTITY picasso "2.71828"><!ENTITY picasso_url "https://square.github.io/picasso/">
+    <!ENTITY okhttp "3.14.4"><!ENTITY okhttp_url "https://square.github.io/okhttp/">
+    <!ENTITY okio "1.17.4"><!ENTITY okio_url "https://square.github.io/okio/">
+    <!ENTITY sothree "3.4.0" ><!ENTITY sothree_url "https://github.com/umano/AndroidSlidingUpPanel">
+    <!ENTITY roadkill "2.1.0" ><!ENTITY roadkill_url "https://github.com/r0adkll/Slidr">
+    <!ENTITY networkMgr "0.1.0" ><!ENTITY networkMgr_url "https://github.com/wise4rmgod/AdnetwrokManager">
+    <!ENTITY circleImg "3.1.0"  ><!ENTITY circleImg_url "https://github.com/hdodenhof/CircleImageView">
+    <!ENTITY keyboard_listener "2.1.0" ><!ENTITY keyboard_listener_url "https://github.com/yshrsmz/KeyboardVisibilityEvent"
+    ><!ENTITY lottie "3.4.0" ><!ENTITY lottie_url "https://airbnb.io/lottie/#/">
+    <!ENTITY bottomBar "2.3.1" ><!ENTITY bottomBar_url "https://github.com/roughike/BottomBar">
+    <!ENTITY animBottomBar "1.0.8" ><!ENTITY animBottomBar_url "https://github.com/Droppers/AnimatedBottomBar">
+    ]>
+
+<resources>
+    <!-- Version INFO -->
+    <string name="app_name" translatable="false">MapKitReference</string>
+    <string name="app_version_m" translatable="false">&ver; &app_version;</string>
+    <string name="hms">Huawei Mobile Services</string>
+    <string name="agc" translatable="false">App Gallery Connect</string>
+    <string name="hms_agcCore_version" translatable="false">&ver; &hms_agcCore;</string>
+    <string name="hms_m">Huawei Map Kit</string>
+    <string name="map_kit_version" translatable="false">&ver; &hms_maps;</string>
+    <string name="map_kit_url" translatable="false">&web; &hms_maps_url;</string>
+    <string name="hms_s">Huawei Site Kit</string>
+    <string name="site_kit_version" translatable="false">&ver; &hms_site;</string>
+    <string name="site_kit_url" translatable="false">&web; &hms_site_url;</string>
+    <string name="hms_l">Huawei Location Kit</string>
+    <string name="loc_kit_version" translatable="false">&ver; &hms_location;</string>
+    <string name="loc_kit_url" translatable="false">&web; &hms_location_url;</string>
+    <string name="square" translatable="false">Square</string>
+    <string name="picasso" translatable="false">Picasso</string>
+    <string name="picasso_version" translatable="false">&ver; &picasso;</string>
+    <string name="picasso_url" translatable="false">&web; &picasso_url;</string>
+    <string name="okhttp" translatable="false">Okhttp</string>
+    <string name="okhttp_version" translatable="false">&ver; &okhttp;</string>
+    <string name="okhttp_url" translatable="false">&web; &okhttp_url;</string>
+    <string name="okio" translatable="false">Okio</string>
+    <string name="okio_version" translatable="false">&ver; &okio;</string>
+    <string name="okio_url" translatable="false">&web; &okio_url;</string>
+    <string name="sothree" translatable="false">AndroidSlidingUpPanel</string>
+    <string name="sothree_version" translatable="false">&ver; &sothree;</string>
+    <string name="sothree_url" translatable="false">&web; &sothree_url;</string>
+    <string name="roadkill" translatable="false">Slidr</string>
+    <string name="roadkill_version" translatable="false">&ver;&roadkill;</string>
+    <string name="roadkill_url" translatable="false">&web; &roadkill_url;</string>
+    <string name="networkMgr" translatable="false">AdnetwrokManager</string>
+    <string name="networkMgr_version" translatable="false">&ver; &networkMgr;</string>
+    <string name="networkMgr_url" translatable="false">&web; &networkMgr_url;</string>
+    <string name="circleImg" translatable="false">CircleImageView</string>
+    <string name="circleImg_version" translatable="false">&ver; &circleImg;</string>
+    <string name="circleImg_url" translatable="false">&web; &circleImg_url;</string>
+    <string name="keyboard_listener" translatable="false">KeyboardVisibilityEvent</string>
+    <string name="keyboard_listener_version" translatable="false">&ver; &keyboard_listener;</string>
+    <string name="keyboard_listener_url" translatable="false">&web; &keyboard_listener_url;</string>
+    <string name="lottie_p" translatable="false">Airbnb</string>
+    <string name="lottie" translatable="false">Lottie</string>
+    <string name="lottie_version" translatable="false">&ver; &lottie;</string>
+    <string name="lottie_url" translatable="false">&web; &lottie_url;</string>
+    <string name="bottomBar" translatable="false">BottomBar</string>
+    <string name="bottomBar_version" translatable="false">&ver; &bottomBar;</string>
+    <string name="bottomBar_url" translatable="false">&web; &bottomBar_url;</string>
+    <string name="animBBar" translatable="false">AnimatedBottomBar</string>
+    <string name="animBBar_version" translatable="false">&ver; &animBottomBar;</string>
+    <string name="animBBar_url" translatable="false">&web; &animBottomBar_url;</string>
+
+    <string name="b_explore">Explore</string>
+    <string name="b_day_mode">Day</string>
+    <string name="b_map_types">Map Types</string>
+    <string name="error_no_perm">Please go to settings and turn on permission for this reference app.</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="directions">Directions</string>
+    <string name="save">Save</string>
+    <string name="share_place">Share Place</string>
+    <string name="pin" translatable="false">pin</string>
+    <string name="item">item</string>
+    <string name="map_day_night">map day night</string>
+    <string name="settings">Settings</string>
+    <string name="day">Day</string>
+    <string name="night">Night</string>
+    <string name="b_around_me">Around Me</string>
+
+    <!-- POI Types -->
+    <string name="poi_airport">Airport</string>
+    <string name="poi_cinema">Cinema</string>
+    <string name="poi_gas">Gas Station</string>
+    <string name="poi_pharmacy">Pharmacy</string>
+    <string name="poi_restaurant">Restaurant</string>
+    <string name="poi_police">Police Station</string>
+    <string name="poi_school">School</string>
+    <string name="poi_market">Market</string>
+    <string name="action_more">More…</string>
+
+    <string name="poi_bank">Bank</string>
+    <string name="poi_restroom">Restroom</string>
+    <string name="poi_busStop">Bus Stop</string>
+    <string name="poi_metro">Metro</string>
+    <string name="poi_tram">Tram</string>
+    <string name="poi_taxi">Taxi</string>
+    <string name="poi_hotel">Hotel</string>
+    <string name="poi_places_to_see">Places to See</string>
+    <string name="poi_museum">Museum</string>
+
+    <!-- More POI's -->
+    <string name="poi_shops">Shopping Centres</string>
+    <string name="poi_leisure_travel">Leisure &amp; Travel</string>
+    <string name="poi_holy">Holy Sites</string>
+    <string name="poi_health">Health Centres</string>
+    <string name="poi_service">Services</string>
+
+    <!-- Restaurant Poi -->
+    <string name="food_drink">Food &amp; Drink</string>
+    <string name="take_away_restaurant">Take Away Restaurant</string>
+    <string name="sushi_restaurant">Sushi Restaurant</string>
+    <string name="yogurt_juice_bar">Yogurt Juice Bar</string>
+    <string name="bistro">Bistro</string>
+    <string name="bar">Bars</string>
+    <string name="cafeteria">Cafeteria</string>
+    <string name="creperie">Creperie</string>
+    <string name="bakery">Bakery</string>
+    <string name="macrobiotic_restaurant">Macrobiotic Restaurant</string>
+
+    <!-- Shop POI -->
+    <string name="department_store">Department Store</string>
+    <string name="shopping_center">Shopping Centre</string>
+    <string name="coffee_shop">Coffee Shop</string>
+    <string name="food_market">Food Market</string>
+    <string name="convenience_store">Convenience Store</string>
+    <string name="grocery">Grocery</string>
+    <string name="bookstore">Bookstore</string>
+    <string name="cd_dvd_video_store">CD DVD Video Store</string>
+    <string name="consumer_electronics_store">Consumer Electronics Store</string>
+    <string name="real_estate_agency_shop">Real Estate Agency</string>
+    <string name="mobile_phone_store">Mobile Phone Store</string>
+    <string name="toys_and_games_store">Toys &amp; Games</string>
+    <string name="gift_store">Gift Shop</string>
+    <string name="meat_store">Meat Store</string>
+    <string name="fish_store">Fish Store</string>
+    <string name="wine_spirits_store">Wine Spirits Store</string>
+    <string name="jewelry_clock_and_watch_shop">Jewelry Clock &amp; Watch Shop</string>
+    <string name="hobby_shop">Hobby Shop</string>
+    <string name="musical_instrument_store">Musical Instrument Store</string>
+
+    <!-- Leisure POI -->
+    <string name="monument">Monument</string>
+    <string name="observatory">Observatory</string>
+    <string name="planetarium">Planetarium</string>
+    <string name="tourist_information_office">Tourist Information Office</string>
+    <string name="sport">Sports Centre</string>
+    <string name="marina">Marina</string>
+    <string name="beach_club">Beach Club</string>
+    <string name="library">Library</string>
+    <string name="mausoleum_grave">Mausoleum Grave</string>
+    <string name="camping_ground">Camping Ground</string>
+    <string name="cottage">Cottage</string>
+    <string name="holiday_house_rental">Holiday House Rental</string>
+    <string name="lodging_living_accommodation">Lodging - Living Accommodation</string>
+    <string name="trail_system">Trails</string>
+    <string name="music_center">Music Centre</string>
+
+    <!-- Holy POI -->
+    <string name="place_of_worship">Place of Worship</string>
+    <string name="church">Church</string>
+    <string name="mosque">Mosque</string>
+    <string name="synagogue">Synagogue</string>
+    <string name="temple">Temple</string>
+    <string name="gurudwara">Gurudwara</string>
+    <string name="ashram">Ashram</string>
+    <string name="pagoda">Pagoda</string>
+    <string name="shinto_shrine">Shinto Shrine</string>
+    <string name="hindu_temple">Hindu Temple</string>
+    <string name="buddhist_temple">Buddhist Temple</string>
+    <string name="jain_temple">Jain Temple</string>
+    <string name="mormon_church">Mormon Church</string>
+    <string name="dharma_temple">Dharma Temple</string>
+
+    <!-- Health POI -->
+    <string name="health_care">Health Care</string>
+    <string name="hospital_polyclinic">Hospital Polyclinic</string>
+    <string name="specialized_hospital">Specialized Hospital</string>
+    <string name="healthcare_service_center">Healthcare Service Centre</string>
+    <string name="blood_bank">Blood Bank</string>
+    <string name="dental_clinic">Dental Clinic</string>
+    <string name="nursing_home">Nursing Home</string>
+    <string name="medical_clinic">Medical Clinic</string>
+    <string name="general_clinic">General Clinic</string>
+    <string name="veterinary_clinic">Veterinary Clinic</string>
+    <string name="ambulance_unit">Ambulance Unit</string>
+    <string name="general_hospital">General Hospital</string>
+    <string name="hospital_for_women_and_children">Hospital for Women &amp; Children</string>
+    <string name="personal_service_center">Personal Service Center</string>
+
+    <!-- Service POI -->
+    <string name="car_wash">Car Wash</string>
+    <string name="automotive_dealer">Automotive Dealer</string>
+    <string name="repair_shop">Repair Shop</string>
+    <string name="parking_lot">Parking Lot</string>
+    <string name="weigh_station">Weigh Station</string>
+    <string name="dry_cleaners">Dry Cleaner</string>
+    <string name="electric_vehicle_charging_station">Electric Vehicle Charging Station</string>
+    <string name="beauty_salon">Beauty Salon</string>
+
+    <!-- Map Details -->
+    <string name="map_details">Map Details</string>
+    <string name="traffic">Traffic</string>
+    <string name="buildings">Buildings</string>
+    <string name="indoor">Indoor</string>
+
+    <!-- Map Styles -->
+    <string name="map_styles">Map Styles</string>
+    <string name="none">None</string>
+    <string name="normal">Normal</string>
+    <string name="satellite">Satellite</string>
+    <string name="terrain">Terrain</string>
+    <string name="hybrid">Hybrid</string>
+
+    <string name="details_traffic_on">Traffic enabled.</string>
+    <string name="details_traffic_off">Traffic disabled.</string>
+
+    <string name="details_building_on">Building enabled.</string>
+    <string name="details_building_off">Building disabled.</string>
+
+    <string name="details_indoor_on">Indoor enabled.</string>
+    <string name="details_indoor_off">Indoor disabled.</string>
+    <string name="from_your_location">From your location</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="action_view">Action View</string>
+
+    <string name="by_car">Car</string>
+    <string name="by_bike">Bike</string>
+    <string name="by_walk">Walk</string>
+
+    <string name="go">Go</string>
+    <string name="emptyHolder" translatable="false">-</string>
+    <string name="dropped_pin">Dropped Pin</string>
+    <string name="poi_image">Poi Image</string>
+    <string name="error_no_poi">No related POI found !</string>
+    <string name="googleMaps">gMaps</string>
+    <string name="hereMaps">hereMaps</string>
+    <string name="clear">clear</string>
+    <string name="share_via_google_maps">Share places via Google Maps</string>
+    <string name="share_via_here_maps">Share places via Here Maps</string>
+    <string name="share_via_open_street">Share places via Open Street</string>
+    <string name="openMaps">openMaps</string>
+    <string name="error_location">Please wait for us to obtain your Position.</string>
+    <string name="error_polyline">Polyline failed!</string>
+    <string name="myLocation">From My Location</string>
+    <string name="arrow_indicator_up_down">Arrow Indicator: Up Down</string>
+    <string name="poi_item">Poi Item</string>
+    <string name="map_appearance">Map Appearance</string>
+    <string name="appearance">Appearance</string>
+    <string name="dark_map">Dark Map</string>
+    <string name="light_map">Light Map</string>
+    <string name="language">Language</string>
+    <string name="turkish">Turkish</string>
+    <string name="english">English</string>
+    <string name="version">Version: </string>
+    <string name="version_m">Version</string>
+    <string name="app_version">App Version</string>
+    <string name="website">Website:</string>
+    <string name="back_button">Back Button</string>
+    <string name="map_settings">Map Preferences</string>
+    <string name="clipboard_success">Text saved to Clipboard.</string>
+    <string name="view_controller">View Controller</string>
+    <string name="saved">Saved</string>
+    <string name="save_to_list">Save to List</string>
+    <string name="new_list">New List</string>
+    <string name="list_type">List Type</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="list_name">List Name</string>
+    <string name="update_list_name">Update List Name</string>
+    <string name="error_List_name">List Name cannot be empty!</string>
+    <string name="deleted">deleted.</string>
+    <string name="hint_search_here">Search Here</string>
+    <string name="cafe_pub">Cafe Pub</string>
+    <string name="map">Map</string>
+    <string name="distance">Distance</string>
+    <string name="error_item">Place you have searched for not found in close proximity.</string>
+    
+    <string name="favorite">favorite</string>
+    <string name="favorites">favorites</string>
+    <string name="prompt_save">Would you like save <bi>%1$s</bi> into <bi>%2$s</bi> </string>
+    <string name="prompt_saved">Saved to Bookmarks.</string>
+    <string name="error_no_bookmark">No saved Bookmark found !</string>
+    <string name="action_saved">Saved</string>
+    <string name="saved_bookmark">Saved Bookmark</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="nearby">Nearby</string>
+    <string name="your_pins">Your Pins</string>
+    <string name="delete_pin">Delete Pin</string>
+
+</resources>

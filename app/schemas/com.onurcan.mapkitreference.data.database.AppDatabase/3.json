@@ -1,0 +1,102 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "b4c8353afbfd0b569ad39f1b4fbf7025",
+    "entities": [
+      {
+        "tableName": "SavedList",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`listId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `listName` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "listId",
+            "columnName": "listId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "listName",
+            "columnName": "listName",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "listId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "SavedPoiItem",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`poiId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `poiName` TEXT NOT NULL, `listName` TEXT NOT NULL, `poiLat` TEXT NOT NULL, `poiLong` TEXT NOT NULL, `poiAddress` TEXT NOT NULL, `poiWebAddress` TEXT NOT NULL, `poiTimestamp` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "poiId",
+            "columnName": "poiId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "poiName",
+            "columnName": "poiName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "listName",
+            "columnName": "listName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "poiLat",
+            "columnName": "poiLat",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "poiLong",
+            "columnName": "poiLong",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "poiAddress",
+            "columnName": "poiAddress",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "poiWebAddress",
+            "columnName": "poiWebAddress",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "poiTimestamp",
+            "columnName": "poiTimestamp",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "poiId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b4c8353afbfd0b569ad39f1b4fbf7025')"
+    ]
+  }
+}

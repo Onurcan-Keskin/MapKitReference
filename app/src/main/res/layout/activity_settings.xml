@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="?attr/backgroundColour"
+    tools:context=".ui.activities.SettingsActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/aldrich"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/settings_card_heading_padding"
+                android:text="@string/appearance"
+                android:textAllCaps="true"
+                android:textColor="?attr/textColour" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="?attr/cardBackgroundColour"
+                app:contentPadding="5dp"
+                app:strokeColor="?attr/lineColour"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/light_map"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_margin="5dp"
+                                android:contentDescription="@string/light_map"
+                                app:tint="@color/iconBackground_day"
+                                android:src="@drawable/world_light" />
+
+                            <TextView
+                                style="@style/TextAppearance.AppCompat.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/day"
+                                android:textColor="?attr/tintColour" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/light_lottie"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_horizontal"
+                                android:visibility="gone"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/lottie_blue_tick" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/dark_map"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_margin="5dp"
+                                android:contentDescription="@string/dark_map"
+                                android:src="@drawable/world_dark"
+                                app:tint="@color/iconBackground_night" />
+
+                            <TextView
+                                style="@style/TextAppearance.AppCompat.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/night"
+                                android:textColor="?attr/tintColour" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/dark_lottie"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_horizontal"
+                                android:visibility="gone"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/lottie_blue_tick" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/day_night_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/day"
+                        android:textColor="?attr/textColour" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/settings_card_heading_padding"
+                android:text="@string/language"
+                android:textAllCaps="true"
+                android:textColor="?attr/textColour" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="?attr/cardBackgroundColour"
+                app:contentPadding="5dp"
+                app:strokeColor="?attr/lineColour"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/tr_lng"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_margin="5dp"
+                                android:clickable="true"
+                                android:contentDescription="@string/light_map"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackgroundBorderless"
+                                android:src="@drawable/ic_turkish"
+                                app:tint="?attr/iconBGColour" />
+
+                            <TextView
+                                style="@style/TextAppearance.AppCompat.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/turkish"
+                                android:textColor="?attr/tintColour" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/tr_lottie"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_horizontal"
+                                android:visibility="gone"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/lottie_blue_tick" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/en_lng"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_margin="5dp"
+                                android:clickable="true"
+                                android:contentDescription="@string/dark_map"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackgroundBorderless"
+                                android:src="@drawable/ic_english"
+                                app:tint="?attr/iconBGColour" />
+
+                            <TextView
+                                style="@style/TextAppearance.AppCompat.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/roboto"
+                                android:text="@string/english"
+                                android:textColor="?attr/tintColour" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/en_lottie"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_horizontal"
+                                android:visibility="gone"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/lottie_blue_tick" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aldrich"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/settings_card_heading_padding"
+                android:text="@string/map_settings"
+                android:textAllCaps="true"
+                android:textColor="?attr/textColour" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/lineColour" />
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/aldrich"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/huawei_red"
+            tools:text="Version: 1.0" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

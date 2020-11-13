@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slidingLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/transparent"
+    android:backgroundTint="@color/transparent"
+    android:elevation="@dimen/elevation_sheet_bottom"
+    android:gravity="bottom"
+    android:visibility="gone"
+    app:umanoDragView="@id/scrollable"
+    app:umanoOverlay="true"
+    app:umanoPanelHeight="137dp"
+    app:umanoScrollableView="@id/scrollable"
+    app:umanoShadowHeight="4dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorPrimary"
+            sothree:theme="@style/ActionBar" />
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:behavior_overlapTop="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_top_corners_light"
+            android:padding="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="60dp"
+                android:layout_height="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="30dp" />
+
+            <LinearLayout
+                android:id="@+id/poiFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/poiBanner"
+                    layout="@layout/bottom_sheet_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.roughike.bottombar.BottomBar
+                    android:id="@+id/poiBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_gravity="bottom"
+                    android:background="?attr/chipsColour"
+                    android:elevation="@dimen/elevation_sheet_bottom"
+                    app:bb_activeTabAlpha="1"
+                    app:bb_activeTabColor="@color/huawei_red"
+                    app:bb_behavior="shifting"
+                    app:bb_inActiveTabAlpha="0.3"
+                    app:bb_inActiveTabColor="@color/inactive_almond"
+                    app:bb_showShadow="true"
+                    app:bb_tabXmlResource="@xml/go_by_tabs"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/poiFrame">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/bottom_sheet_ui"
+                        layout="@layout/bottom_sheet_ui"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <include
+                        android:id="@+id/bottom_sheet_poi_info"
+                        layout="@layout/bottom_sheet_poi_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

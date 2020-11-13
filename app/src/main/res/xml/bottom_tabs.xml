@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        icon="@drawable/ic_pin"
+        id="@+id/tab_explore"
+        title="@string/b_explore" />
+    <tab
+        icon="@drawable/ic_bookmark"
+        id="@+id/tab_saved"
+        title="@string/saved" />
+    <tab
+        icon="@drawable/ic_around_the_world"
+        id="@+id/tab_around"
+        title="@string/b_around_me" />
+
+</tabs>

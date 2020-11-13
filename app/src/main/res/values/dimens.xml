@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="editTxt_bottom_margin">5dp</dimen>
+    <dimen name="bannerless_top_margin">40dp</dimen>
+    <dimen name="editTxt_start_end_margin">10dp</dimen>
+    <dimen name="site_item_margin">50dp</dimen>
+    <dimen name="bottom_sheet_ui_image">32dp</dimen>
+    <dimen name="bottom_sheet_ui_text">14sp</dimen>
+    <dimen name="margin_from_bottom_bar_for_sheets">55dp</dimen>
+
+    <dimen name="start_fromTop">40dp</dimen>
+
+    <dimen name="popup_item_width">94dp</dimen>
+    <dimen name="popup_item_height">72dp</dimen>
+
+    <dimen name="elevation_sheet_bottom">12dp</dimen>
+
+    <dimen name="settings_card_heading_padding">10dp</dimen>
+
+    <dimen name="more_image_content">32dp</dimen>
+    <dimen name="more_padding_tabs">10dp</dimen>
+
+    <dimen name="more_seperator">3dp</dimen>
+
+    <dimen name="settings_version_in1_padding">5dp</dimen>
+    <dimen name="settings_version_in2_padding">10dp</dimen>
+    <dimen name="line_margin">10dp</dimen>
+
+    <dimen name="here_maps_image_padding">10dp</dimen>
+    <dimen name="open_street_image_padding">5dp</dimen>
+    <dimen name="badge_left_margin">8dp</dimen>
+
+</resources>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/more_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/colour_bg_light_1">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/d_appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="5dp"
+        app:cardBackgroundColor="?attr/cardBackgroundColour"
+        app:cardCornerRadius="3dp"
+        app:contentPadding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/d_back"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".1"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:contentDescription="@string/back_button"
+                android:focusable="true"
+                android:foreground="@drawable/round_ripple"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/more_editText"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".9"
+                android:text="@string/action_more"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d_appBarLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <!-- Restaurants -->
+
+            <LinearLayout
+                android:id="@+id/more_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                android:paddingBottom="5dp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:contentDescription="@string/poi_restaurant"
+                    android:src="@drawable/ic_restaurant" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/more_padding_tabs"
+                    android:paddingEnd="@dimen/more_padding_tabs"
+                    android:text="@string/food_drink"
+                    android:textColor="@color/huawei_red" />
+
+                <ImageView
+                    android:id="@+id/more_restaurant_img"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:clickable="true"
+                    android:contentDescription="@string/view_controller"
+                    android:focusable="true"
+                    android:foreground="@drawable/round_ripple"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/more_restaurant_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                tools:listitem="@layout/single_poi_item" />
+
+            <!-- Shops -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/more_seperator"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/borderColour" />
+
+            <LinearLayout
+                android:id="@+id/more_shops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                android:paddingBottom="5dp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:contentDescription="@string/poi_shops"
+                    android:src="@drawable/ic_market" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/more_padding_tabs"
+                    android:paddingEnd="@dimen/more_padding_tabs"
+                    android:text="@string/poi_shops"
+                    android:textColor="@color/huawei_red" />
+
+                <ImageView
+                    android:id="@+id/more_shop_img"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:clickable="true"
+                    android:contentDescription="@string/view_controller"
+                    android:focusable="true"
+                    android:foreground="@drawable/round_ripple"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/more_shops_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                tools:listitem="@layout/single_poi_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/more_seperator"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/borderColour" />
+
+            <!-- Leisure & Travel -->
+
+            <LinearLayout
+                android:id="@+id/more_leisure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                android:paddingBottom="5dp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:contentDescription="@string/poi_restaurant"
+                    android:src="@drawable/ic_hotel" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/more_padding_tabs"
+                    android:paddingEnd="@dimen/more_padding_tabs"
+                    android:text="@string/poi_leisure_travel"
+                    android:textColor="@color/huawei_red" />
+
+                <ImageView
+                    android:id="@+id/more_leisure_img"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:clickable="true"
+                    android:contentDescription="@string/view_controller"
+                    android:focusable="true"
+                    android:foreground="@drawable/round_ripple"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/more_leisure_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                tools:listitem="@layout/single_poi_item" />
+
+            <!-- Holy Sites -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/more_seperator"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/borderColour" />
+
+            <LinearLayout
+                android:id="@+id/more_holy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                android:paddingBottom="5dp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:contentDescription="@string/poi_holy"
+                    android:src="@drawable/ic_holysite" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/more_padding_tabs"
+                    android:paddingEnd="@dimen/more_padding_tabs"
+                    android:text="@string/poi_holy"
+                    android:textColor="@color/huawei_red" />
+
+                <ImageView
+                    android:id="@+id/more_holy_img"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:clickable="true"
+                    android:contentDescription="@string/view_controller"
+                    android:focusable="true"
+                    android:foreground="@drawable/round_ripple"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/more_holy_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                tools:listitem="@layout/single_poi_item" />
+
+            <!-- Health Centres -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/more_seperator"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/borderColour" />
+
+            <LinearLayout
+                android:id="@+id/more_health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                android:paddingBottom="5dp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:contentDescription="@string/poi_health"
+                    android:src="@drawable/ic_pharmacy" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/more_padding_tabs"
+                    android:paddingEnd="@dimen/more_padding_tabs"
+                    android:text="@string/poi_health"
+                    android:textColor="@color/huawei_red" />
+
+                <ImageView
+                    android:id="@+id/more_health_img"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:clickable="true"
+                    android:contentDescription="@string/view_controller"
+                    android:focusable="true"
+                    android:foreground="@drawable/round_ripple"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/more_health_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                tools:listitem="@layout/single_poi_item" />
+
+            <!-- Services -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/more_seperator"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/borderColour" />
+
+            <LinearLayout
+                android:id="@+id/more_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                android:paddingBottom="5dp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:contentDescription="@string/poi_health"
+                    android:src="@drawable/ic_service" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/more_padding_tabs"
+                    android:paddingEnd="@dimen/more_padding_tabs"
+                    android:text="@string/poi_service"
+                    android:textColor="@color/huawei_red" />
+
+                <ImageView
+                    android:id="@+id/more_service_img"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/more_image_content"
+                    android:layout_weight=".2"
+                    android:clickable="true"
+                    android:contentDescription="@string/view_controller"
+                    android:focusable="true"
+                    android:foreground="@drawable/round_ripple"
+                    android:src="@drawable/ic_arrow_up" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/more_service_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/more_padding_tabs"
+                android:paddingEnd="@dimen/more_padding_tabs"
+                tools:listitem="@layout/single_poi_item" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

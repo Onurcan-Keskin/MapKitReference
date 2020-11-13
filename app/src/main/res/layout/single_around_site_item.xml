@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_item_lister"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    android:scrollbarThumbHorizontal="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/poi_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_bank_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_bank_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_bank"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_bank" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_restroom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_restroom_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_restroom"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_toilet" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_bus_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_bus_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_busStop"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_bus" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_metro_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_metro_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_metro"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_metro" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_tram_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_tram_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_tram"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_tram" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_taxi_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_taxi_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_taxi"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_taxi" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_hotel_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_hotel_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_hotel"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_hotel" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_places2see_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_places2see_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_places_to_see"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_p2s" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_museum_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="?attr/chipsColour"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:contentPadding="5dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/single_museum_txt"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/poi_museum"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColour"
+                app:drawableStartCompat="@drawable/ic_museum" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</HorizontalScrollView>

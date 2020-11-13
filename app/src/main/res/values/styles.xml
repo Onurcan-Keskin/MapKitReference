@@ -1,0 +1,135 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="snackbarStyle">@style/Snackbar</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="LightMode" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="cardBackgroundColour">@color/cardBackground_day</item>
+        <item name="textColour">@color/textColor_day</item>
+        <item name="tintColour">@color/tintColor_day</item>
+        <item name="backgroundColour">@color/background_day</item>
+        <item name="backgroundColourTransparent">@color/backgroundTrans_day</item>
+        <item name="chipsColour">@color/cardBackground_day</item>
+        <item name="iconColour">@color/huawei_red</item>
+        <item name="iconBGColour">@color/iconBackground_day</item>
+        <item name="lineColour">@color/gray</item>
+        <item name="borderColour">@color/gray</item>
+        <item name="snackbarStyle">@style/Snackbar</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="DarkMode" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="cardBackgroundColour">@color/cardBackground_night</item>
+        <item name="textColour">@color/textColor_night</item>
+        <item name="tintColour">@color/tintColor_night</item>
+        <item name="backgroundColour">@color/background_night</item>
+        <item name="backgroundColourTransparent">@color/backgroundTrans_night</item>
+        <item name="chipsColour">@color/chips_night</item>
+        <item name="iconColour">@color/white</item>
+        <item name="iconBGColour">@color/iconBackground_night</item>
+        <item name="lineColour">@color/darkGray</item>
+        <item name="borderColour">@color/white</item>
+        <item name="snackbarStyle">@style/Snackbar</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="LightMode_withStatBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="cardBackgroundColour">@color/cardBackground_day</item>
+        <item name="textColour">@color/textColor_day</item>
+        <item name="tintColour">@color/tintColor_day</item>
+        <item name="backgroundColour">@color/background_day</item>
+        <item name="backgroundColourTransparent">@color/backgroundTrans_day</item>
+        <item name="chipsColour">@color/cardBackground_day</item>
+        <item name="iconColour">@color/huawei_red</item>
+        <item name="iconBGColour">@color/iconBackground_day</item>
+        <item name="lineColour">@color/gray</item>
+        <item name="borderColour">@color/gray</item>
+        <item name="snackbarStyle">@style/Snackbar</item>
+        <item name="actionBarStyle">@style/LightActionBar</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+    </style>
+
+    <style name="DarkMode_withStatBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="cardBackgroundColour">@color/cardBackground_night</item>
+        <item name="textColour">@color/textColor_night</item>
+        <item name="tintColour">@color/tintColor_night</item>
+        <item name="backgroundColour">@color/background_night</item>
+        <item name="backgroundColourTransparent">@color/backgroundTrans_night</item>
+        <item name="chipsColour">@color/chips_night</item>
+        <item name="iconColour">@color/white</item>
+        <item name="iconBGColour">@color/iconBackground_night</item>
+        <item name="lineColour">@color/darkGray</item>
+        <item name="borderColour">@color/white</item>
+        <item name="snackbarStyle">@style/Snackbar</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/aldrich</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">?attr/tintColour</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LightActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/action_bar_bg_light</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/action_bar_bg_light</item>
+    </style>
+
+    <style name="BlurTheme" parent="android:style/Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="DialogSlide">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:displayOptions">homeAsUp</item>
+    </style>
+
+    <style name="Popup_Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="elevation">22dp</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:layout_marginBottom">65dp</item>
+    </style>
+
+</resources>

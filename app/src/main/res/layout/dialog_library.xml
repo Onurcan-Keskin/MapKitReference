@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/d_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:background="?attr/backgroundColour">
+
+            <ImageButton
+                android:id="@+id/d_back"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:contentDescription="@string/back_button"
+                android:focusable="true"
+                android:foreground="@drawable/round_ripple"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/bicubik"
+                android:gravity="start|center_vertical"
+                android:text="@string/version_m"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/d_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/d_library_ln_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:background="?attr/backgroundColour">
+
+            <!-- App Version  -->
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/app_version"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/app_version_m"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/hms"
+                android:textColor="@color/huawei_red" />
+
+            <!-- AGC Connect Version  -->
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/agc"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/hms_agcCore_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <!-- Huawei Maps Version  -->
+            <TextView
+                android:id="@+id/map_name"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/hms_m"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/map_kit_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/map_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/map_kit_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <!-- Huawei Site Version  -->
+            <TextView
+                android:id="@+id/site_name"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/hms_s"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/site_kit_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/site_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/site_kit_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <!-- Huawei Location Version  -->
+            <TextView
+                android:id="@+id/loc_name"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/hms_l"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/loc_kit_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/loc_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/loc_kit_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <!-- Room Version  -->
+
+
+            <!-- Square Libraries -->
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/square"
+                android:textColor="@color/huawei_red" />
+
+            <!-- Picasso  -->
+            <TextView
+                android:id="@+id/picass_name"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/picasso"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/picasso_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/picass_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/picasso_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <!-- Okhttp  -->
+            <TextView
+                android:id="@+id/okhttp_name"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/okhttp"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/okhttp_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/okhttp_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/okhttp_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <!-- Okio  -->
+            <TextView
+                android:id="@+id/okio_name"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/okio"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/okio_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/okio_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/okio_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <!-- Airbnb Libraries -->
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/lottie_p"
+                android:textColor="@color/huawei_red" />
+
+            <!-- Lottie -->
+            <TextView
+                android:id="@+id/lottie_name"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="@dimen/settings_version_in1_padding"
+                android:text="@string/lottie"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/lottie_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/lottie_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/lottie_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <!-- Github Libraries -->
+
+            <!-- AndroidSlidingUpPanel -->
+            <TextView
+                android:id="@+id/slide_name"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/sothree"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/sothree_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/slide_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/sothree_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <!-- AdnetwrokManager -->
+            <TextView
+                android:id="@+id/net_name"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/networkMgr"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/networkMgr_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/net_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/networkMgr_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <!-- CircleImageView -->
+            <TextView
+                android:id="@+id/circle_name"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/circleImg"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/circleImg_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/circle_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/circleImg_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <!-- KeyboardVisibilityEvent -->
+            <TextView
+                android:id="@+id/key_name"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/keyboard_listener"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/keyboard_listener_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/key_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/keyboard_listener_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <!--BottomBar -->
+            <TextView
+                android:id="@+id/bottom_name"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/bottomBar"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/bottomBar_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/bottom_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/bottomBar_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/line_margin"
+                android:layout_marginBottom="@dimen/line_margin"
+                android:background="?attr/borderColour" />
+
+            <!--AnimatedBottomBar -->
+            <TextView
+                android:id="@+id/anim_name"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="@string/animBBar"
+                android:textColor="@color/huawei_red" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/animBBar_version"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/anim_url"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/phenomena_regular"
+                android:foreground="@drawable/round_ripple"
+                android:paddingStart="@dimen/settings_version_in2_padding"
+                android:paddingTop="@dimen/settings_version_in1_padding"
+                android:paddingEnd="@dimen/settings_version_in2_padding"
+                android:paddingBottom="@dimen/settings_version_in1_padding"
+                android:text="@string/animBBar_url"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

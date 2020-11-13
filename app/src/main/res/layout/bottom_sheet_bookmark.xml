@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/around_me_sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:animateLayoutChanges="true"
+    android:elevation="@dimen/elevation_sheet_bottom"
+    android:gravity="bottom"
+    android:visibility="gone"
+    app:umanoDragView="@+id/dragView"
+    app:umanoOverlay="false"
+    app:umanoPanelHeight="316dp"
+    app:umanoScrollableView="@id/bookmark_recycler_recent"
+    app:umanoShadowHeight="4dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+        <androidx.appcompat.widget.Toolbar xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/colorPrimary"
+            sothree:theme="@style/ActionBar" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_top_corners_light"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="30dp" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:fontFamily="@font/bicubik"
+            android:gravity="center"
+            android:text="@string/action_saved"
+            android:textColor="?attr/tintColour" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbarThumbVertical="@color/huawei_red"
+            app:behavior_overlapTop="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lottie_text"
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/error_no_bookmark"
+                    android:textColor="@color/error_action"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/recent_text"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="@drawable/round_ripple"
+                    android:padding="5dp"
+                    android:text="@string/recently_added"
+                    android:textColor="@color/huawei_red"
+                    app:drawableEndCompat="@drawable/ic_arrow_up" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bookmark_recycler_recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    tools:listitem="@layout/single_poi_card_roomdb" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/recent_lottie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/empty_list" />
+
+                <TextView
+                    android:id="@+id/nearby_text"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="@drawable/round_ripple"
+                    android:padding="5dp"
+                    android:text="@string/nearby"
+                    android:textColor="@color/huawei_red"
+                    app:drawableEndCompat="@drawable/ic_arrow_up" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bookmark_recycler_nearby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    tools:listitem="@layout/single_poi_card_roomdb" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/nearby_lottie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/empty_list" />
+
+                <TextView
+                    android:id="@+id/all_text"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="@drawable/round_ripple"
+                    android:padding="5dp"
+                    android:text="@string/your_pins"
+                    android:textColor="@color/huawei_red"
+                    app:drawableEndCompat="@drawable/ic_arrow_up" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bookmark_recycler_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    tools:listitem="@layout/single_poi_card_roomdb" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/all_lottie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/empty_list" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

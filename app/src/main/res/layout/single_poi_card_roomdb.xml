@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    android:layout_height="170dp"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:id="@+id/parentCard"
+    app:cardBackgroundColor="?attr/cardBackgroundColour"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="5dp"
+    app:strokeColor="@color/gray"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:id="@+id/single_poi_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/round_ripple"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/poi_item"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_poi_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/single_poi_address"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textColor="?attr/tintColour"
+                android:textStyle="bold"
+                tools:text="@string/poi_item" />
+
+            <TextView
+                android:id="@+id/single_poi_info"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:ems="10"
+                android:fontFamily="@font/phenomena_regular"
+                android:maxLines="1"
+                android:textColor="?attr/textColour"
+                android:textSize="12sp"
+                tools:text="30 m . Near Anatolian High" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/single_poi_list_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/list_name"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_list" />
+
+                <TextView
+                    android:id="@+id/single_poi_list_name"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical"
+                    android:textColor="?attr/textColour"
+                    android:textSize="12sp"
+                    tools:text="@string/list_name" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/single_poi_long_press_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/round_ripple"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/delete_pin"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:foreground="@drawable/round_ripple"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/delete_pin"
+            android:textColor="?attr/tintColour"
+            app:drawableStartCompat="@drawable/ic_delete"
+            app:drawableTint="@color/huawei_red" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/borderColour" />
+
+        <TextView
+            android:id="@+id/clear"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:foreground="@drawable/round_ripple"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/cancel"
+            android:textColor="?attr/tintColour"
+            app:drawableStartCompat="@drawable/ic_clear_x"
+            app:drawableTint="@color/huawei_red" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

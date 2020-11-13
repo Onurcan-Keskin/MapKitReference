@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/cardBackgroundColour"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_weight=".2"
+            android:contentDescription="@string/list_type"
+            android:src="@drawable/ic_list"
+            app:tint="@color/huawei_red" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight=".8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/list_name"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:padding="3dp"
+                android:textColor="?attr/tintColour"
+                tools:text="Home" />
+
+            <TextView
+                android:id="@+id/list_counter"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/phenomena_regular"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:textColor="?attr/textColour"
+                tools:text="# place" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/borderColour" />
+
+</LinearLayout>

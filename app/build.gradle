@@ -1,0 +1,173 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.huawei.agconnect'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.onurcan.mapkitreference"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        multiDexEnabled true
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":"$projectDir/schemas".toString(),
+                             "room.incremental":"true",
+                             "room.expandProjection":"true"]
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('xxx')
+            keyAlias 'xxx'
+            keyPassword 'xxx'
+            storePassword 'xxx'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding = true
+    }
+
+    kapt {
+        useBuildCache = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    /* Kotlin & Legacy */
+    def core_ktx = "1.3.2"
+    def appcompat = "1.2.0"
+    def constraintLayout = "2.0.4"
+    def legacySupport = "1.0.0"
+    def recyclerView = "1.1.0"
+    def multidex = "2.0.1"
+
+    /* Room DB */
+    def room_version = "2.2.5"
+
+    /* Huawei */
+    def agcCore = "1.4.0.300"
+    def maps = "5.0.1.300"
+    def site = "5.0.1.300"
+    def location = "5.0.2.301"
+
+    /* Squareup */
+    def picasso = "2.71828"
+    def okhttp = "3.14.4"
+    def okio = "1.17.4"
+
+    /* Faster XML */
+    def jacksonCore = "2.4.1"
+
+    /* Github */
+    def sothree = "3.4.0" // Sliding Sheets
+    def roadkill = "2.1.0" // Slider Activity
+    def networkMgr = "0.1.0" // Network Manager
+    def circleImg = "3.1.0" // Circle Image
+    def keyboard_listener = "2.1.0" // Keyboard Listener
+    def lottie = "3.4.0" // Lottie Animator
+    def bottomBar = "2.3.1" // Bottom Bar for Main Activity
+    def animBottomBar = "1.0.8"// Bottom Bar for Go-by
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$core_ktx"
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+    implementation "androidx.legacy:legacy-support-v4:$legacySupport"
+    implementation "androidx.recyclerview:recyclerview:$recyclerView"
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation "androidx.multidex:multidex:$multidex"
+    implementation 'androidx.ui:ui-tooling:0.1.0-dev02'
+    implementation 'androidx.ui:ui-layout:0.1.0-dev02'
+    implementation 'androidx.ui:ui-material:0.1.0-dev02'
+
+    /* Room DB */
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+    // implementation "androidx.room:room-rxjava2:$room_version"
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+
+    // optional - Test helpers
+    testImplementation "androidx.room:room-testing:$room_version"
+
+    /*Huawei*/
+    implementation "com.huawei.agconnect:agconnect-core:$agcCore"
+    implementation "com.huawei.hms:maps:$maps"
+    implementation "com.huawei.hms:site:$site"
+    implementation "com.huawei.hms:location:$location"
+
+    implementation "com.sothree.slidinguppanel:library:$sothree"
+
+    /* Material */
+    //noinspection GradleDependency
+    implementation 'com.google.android.material:material:1.0.0-alpha1'
+
+    /*Sliding Activity*/
+    implementation "com.r0adkll:slidableactivity:$roadkill"
+
+    /*Network Manager*/
+    implementation "com.github.wise4rmgod:AdnetwrokManager:$networkMgr"
+
+    /* Circle Image View */
+    implementation "de.hdodenhof:circleimageview:$circleImg"
+
+    /* Bottom Navigation - AwesomeStyles */
+    implementation "nl.joery.animatedbottombar:library:$animBottomBar"
+
+    /* Keyboard Listener */
+    implementation "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:$keyboard_listener"
+
+    /* Squareup */
+    implementation "com.squareup.picasso:picasso:$picasso"
+    implementation(
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: "$jacksonCore"],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: "$jacksonCore"],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jacksonCore"],
+    )
+    implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    implementation "com.squareup.okio:okio:$okio"
+
+    /* Lottie */
+    implementation "com.airbnb.android:lottie:$lottie"
+
+    implementation "com.roughike:bottom-bar:$bottomBar"
+}

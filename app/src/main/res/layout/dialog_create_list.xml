@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_create_list_lin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColour"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/d_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:background="?attr/cardBackgroundColour">
+
+            <ImageButton
+                android:id="@+id/d_back"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:contentDescription="@string/back_button"
+                android:focusable="true"
+                android:foreground="@drawable/round_ripple"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/bicubik"
+                android:gravity="center"
+                android:text="@string/save_to_list"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/d_done"
+                app:layout_constraintStart_toEndOf="@+id/d_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/d_done"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/aldrich"
+                android:foreground="@drawable/round_ripple"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/done"
+                android:textColor="@color/huawei_red"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/d_new_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_ripple"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/round_ripple"
+        app:cardBackgroundColor="?attr/cardBackgroundColour"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="2dp"
+        app:contentPadding="5dp"
+        app:strokeColor="?attr/lineColour"
+        app:strokeWidth="1dp">
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aldrich"
+            android:gravity="center"
+            android:text="@string/new_list"
+            android:textColor="@color/huawei_red"
+            app:drawableStartCompat="@drawable/ic_add"
+            app:drawableTint="@color/huawei_red" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/borderColour" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/d_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/single_list_name_roomdb" />
+
+</LinearLayout>

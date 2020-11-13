@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="5dp"
+    android:layout_marginTop="@dimen/bannerless_top_margin"
+    android:visibility="gone">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/backgroundColourTransparent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/backgroundColourTransparent"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <include
+                android:id="@+id/from_to_banner_includer"
+                layout="@layout/from_to_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="parallax" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <nl.joery.animatedbottombar.AnimatedBottomBar
+            android:id="@+id/single_user_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            app:abb_indicatorAppearance="round"
+            app:abb_indicatorColor="@color/huawei_red"
+            app:abb_indicatorLocation="top"
+            app:abb_rippleColor="@color/huawei_red"
+            app:abb_rippleEnabled="true"
+            app:abb_selectedIndex="0"
+            app:abb_selectedTabType="text"
+            app:abb_tabAnimation="slide"
+            app:abb_tabColor="?attr/chipsColour"
+            app:abb_tabColorSelected="@color/huawei_red"
+            app:abb_tabs="@menu/go_by_menu"
+            app:abb_textStyle="bold"
+            app:hideOnScroll="true" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

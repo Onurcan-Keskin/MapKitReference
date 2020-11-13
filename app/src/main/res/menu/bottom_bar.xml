@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_explore"
+        android:icon="@drawable/ic_pin"
+        android:enabled="true"
+        android:menuCategory="system"
+        android:title="@string/b_explore"
+        android:tooltipText="@string/b_explore"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_around"
+        android:icon="@drawable/ic_launcher_background"
+        android:menuCategory="system"
+        android:title="@string/b_around_me"
+        android:enabled="true"
+        android:tooltipText="@string/b_around_me"
+        app:showAsAction="ifRoom" />
+</menu>

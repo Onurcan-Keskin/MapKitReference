@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/midnight"
+    tools:context=".ui.activities.MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <include
+            android:id="@+id/from_to_includer"
+            layout="@layout/layout_goto" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/material_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/editTxt_start_end_margin"
+            android:layout_marginTop="@dimen/bannerless_top_margin"
+            android:layout_marginEnd="@dimen/editTxt_start_end_margin"
+            android:elevation="5dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColour"
+            app:cardCornerRadius="15dp"
+            app:contentPadding="10dp"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/pin_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight=".1"
+                    android:clickable="true"
+                    android:contentDescription="@string/pin"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_pin" />
+
+                <EditText
+                    android:id="@+id/poi_editText"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/hint_search_here"
+                    android:importantForAutofill="no"
+                    android:inputType="textAutoComplete"
+                    android:textColor="?attr/tintColour"
+                    android:textColorHint="?attr/textColour" />
+
+                <ImageView
+                    android:id="@+id/map_settings"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight=".1"
+                    android:clickable="true"
+                    android:contentDescription="@string/settings"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_settings" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_poi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="96dp"
+            android:elevation="3dp"
+            tools:listitem="@layout/single_poi_item" />
+
+        <include
+            android:id="@+id/distance_pop_includer"
+            layout="@layout/single_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp" />
+
+        <include
+            android:id="@+id/go_by_pop_includer"
+            layout="@layout/single_go_by"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/editTxt_start_end_margin"
+            android:layout_marginTop="195dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/map_details"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="125dp"
+            android:clickable="true"
+            android:elevation="3dp"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="@color/huawei_red"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/aldrich"
+                android:padding="5dp"
+                android:text="@string/map"
+                android:textColor="@color/white"
+                app:drawableTint="@color/white"
+                app:drawableTopCompat="@drawable/ic_stacked" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/map_go"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="65dp"
+            android:clickable="true"
+            android:elevation="3dp"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="@color/huawei_red"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/aldrich"
+                android:padding="5dp"
+                android:text="@string/go"
+                android:textColor="@color/white"
+                app:drawableTint="@color/white"
+                app:drawableTopCompat="@drawable/ic_directions" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/map_layout"
+            layout="@layout/layout_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundPrimary"
+            android:visibility="visible" />
+
+        <include
+            android:id="@+id/bottom_sheet_inc"
+            layout="@layout/bottom_sheet_poi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_from_bottom_bar_for_sheets" />
+
+        <include
+            android:id="@+id/bottom_sheet_bookmark_inc"
+            layout="@layout/bottom_sheet_bookmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_from_bottom_bar_for_sheets" />
+
+        <include
+            android:id="@+id/bottom_sheet_around_inc"
+            layout="@layout/bottom_sheet_around_me"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_from_bottom_bar_for_sheets" />
+
+        <com.roughike.bottombar.BottomBar
+            android:id="@+id/main_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="?attr/cardBackgroundColour"
+            android:elevation="@dimen/elevation_sheet_bottom"
+            app:bb_activeTabAlpha="1"
+            app:bb_activeTabColor="@color/huawei_red"
+            app:bb_behavior="shifting"
+            app:bb_inActiveTabAlpha="0.6"
+            app:bb_inActiveTabColor="@color/inactive_almond"
+            app:bb_showShadow="true"
+            app:bb_tabXmlResource="@xml/bottom_tabs" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

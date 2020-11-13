@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true">
+
+    <ImageView
+        android:id="@+id/poi_image"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:contentDescription="@string/poi_image"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        tool:src="@drawable/default_poi_image" />
+
+    <TextView
+        android:id="@+id/poi_name"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="?attr/tintColour"
+        tool:text="POI Name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/poi_type"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/textColour"
+            tool:text="POI Type" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:text="."
+            android:textColor="?attr/textColour"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/poi_eta"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/textColour"
+            tool:text="ETA time" />
+
+    </LinearLayout>
+
+</LinearLayout>

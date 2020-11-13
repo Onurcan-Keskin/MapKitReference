@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="6dp"
+        app:cardBackgroundColor="@color/cardBackground_day"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".9"
+                    android:fontFamily="@font/aldrich"
+                    android:padding="10dp"
+                    android:text="@string/map_styles"
+                    android:textColor="@color/tintColor_day"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/close_popup"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_weight=".1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/clear"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_clear_x"
+                    android:tint="@color/tintColor_day" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/map_s_none"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/popup_item_width"
+                    android:layout_height="@dimen/popup_item_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/none"
+                    android:textColor="@color/textColor_day"
+                    app:drawableTint="@color/huawei_red"
+                    app:drawableTopCompat="@drawable/ic_stacked" />
+
+                <TextView
+                    android:id="@+id/map_s_normal"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/popup_item_width"
+                    android:layout_height="@dimen/popup_item_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/normal"
+                    android:textColor="@color/textColor_day"
+                    app:drawableTint="@color/huawei_red"
+                    app:drawableTopCompat="@drawable/ic_stacked" />
+
+                <TextView
+                    android:id="@+id/map_s_satellite"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/popup_item_width"
+                    android:layout_height="@dimen/popup_item_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/satellite"
+                    android:textColor="@color/textColor_day"
+                    app:drawableTint="@color/huawei_red"
+                    app:drawableTopCompat="@drawable/ic_stacked" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/map_s_terrain"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/popup_item_width"
+                    android:layout_height="@dimen/popup_item_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/terrain"
+                    android:textColor="@color/textColor_day"
+                    app:drawableTint="@color/huawei_red"
+                    app:drawableTopCompat="@drawable/ic_stacked" />
+
+                <TextView
+                    android:id="@+id/map_s_hybrid"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/popup_item_width"
+                    android:layout_height="@dimen/popup_item_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/hybrid"
+                    android:textColor="@color/textColor_day"
+                    app:drawableTint="@color/huawei_red"
+                    app:drawableTopCompat="@drawable/ic_stacked" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:padding="10dp"
+                android:text="@string/map_details"
+                android:textColor="@color/textColor_day"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/map_d_traffic"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/popup_item_width"
+                    android:layout_height="@dimen/popup_item_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/traffic"
+                    android:textColor="@color/textColor_day"
+                    app:drawableTint="@color/huawei_red"
+                    app:drawableTopCompat="@drawable/ic_traffic" />
+
+                <TextView
+                    android:id="@+id/map_d_building"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/popup_item_width"
+                    android:layout_height="@dimen/popup_item_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/buildings"
+                    android:textColor="@color/textColor_day"
+                    app:drawableTint="@color/huawei_red"
+                    app:drawableTopCompat="@drawable/ic_building" />
+
+                <TextView
+                    android:id="@+id/map_d_indoor"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/popup_item_width"
+                    android:layout_height="@dimen/popup_item_height"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/roboto"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/indoor"
+                    android:textColor="@color/textColor_day"
+                    app:drawableTint="@color/huawei_red"
+                    app:drawableTopCompat="@drawable/ic_indoor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

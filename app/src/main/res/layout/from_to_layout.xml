@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/from_to_back_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:clickable="true"
+            android:contentDescription="@string/action_view"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/pin"
+                android:src="@drawable/ic_pin_from" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/pin"
+                android:src="@drawable/ic_menu"
+                app:tint="?attr/chipsColour" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/pin"
+                android:src="@drawable/ic_pin_to" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/from_to_start_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="?attr/cardBackgroundColour"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="5dp"
+                app:strokeColor="@color/gray"
+                app:strokeWidth="1dp">
+
+                <EditText
+                    android:id="@+id/from_to_your_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/cardBackgroundColour"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/from"
+                    android:inputType="textAutoComplete"
+                    android:text="@string/from_your_location"
+                    android:textColor="?attr/tintColour"
+                    android:textColorHint="?attr/textColour" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/from_to_destination_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="?attr/cardBackgroundColour"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="5dp"
+                app:strokeColor="@color/gray"
+                app:strokeWidth="1dp">
+
+                <EditText
+                    android:id="@+id/from_to_destination_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/cardBackgroundColour"
+                    android:fontFamily="@font/roboto"
+                    android:hint="@string/to"
+                    android:inputType="textAutoComplete"
+                    android:textColor="?attr/tintColour"
+                    android:textColorHint="?attr/textColour" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

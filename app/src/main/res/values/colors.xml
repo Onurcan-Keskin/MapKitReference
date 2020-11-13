@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#17131B</color>
+    <color name="colorPrimaryDark">#1B1C22</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="cardBackground_day">#EDFFFDFD</color>
+    <color name="cardBackground_night">#1C1C1E</color>
+
+    <color name="chips_day">#AEAEAE</color>
+    <color name="chips_night">#2D2D2D</color>
+
+    <color name="textColor_day">#756D6D</color>
+    <color name="textColor_night">#989696</color>
+
+    <color name="tintColor_day">#11141B</color>
+    <color name="tintColor_night">#F3F5F6</color>
+
+    <color name="colorRed">#FF2851</color>
+    <color name="colorGreen">#00CBA9</color>
+
+    <color name="c">#00A344</color>
+
+    <color name="background_day">#D1D1D1</color>
+    <color name="background_night">#121212</color>
+
+    <color name="backgroundTrans_day">#65D1D1D1</color>
+    <color name="backgroundTrans_night">#65121212</color>
+
+    <color name="iconBackground_day">#D3B6B6</color>
+    <color name="iconBackground_night">#404040</color>
+
+    <color name="inactive_almond">#DAC1A4</color>
+
+    <color name="error_action">#ff5c00</color>
+
+    <color name="midnight">#100C0B</color>
+    <color name="backgroundPrimary">#262626</color>
+    <color name="transparent">#0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="huawei_red">#cf0a2c</color>
+    <color name="gray">#e5e6e8</color>
+    <color name="darkGray">#2B2B2D</color>
+</resources>
