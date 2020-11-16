@@ -8,13 +8,13 @@ Notice that under app level [build.gradle](https://github.com/Onurcan-Keskin/Map
 
 ## Goals
 
-The goal of this repository is to provide a basic solution structure by using Kotlin, MVP and many other development tools like Rx and Gson to help developers to give a glimpse of properly build application using [Huawei Mobile Services](https://developer.huawei.com/consumer/en/).
+The goal of this repository is to provide a basic solution structure by using Kotlin, Coroutines, MVP and many other development tools like Rx, Gson and RoomDB to help developers to give a glimpse of properly build application using [Huawei Mobile Services](https://developer.huawei.com/consumer/en/).
 
 ## Features of this application
 
 - Dedicated Day-Night Mode
 - Turkish-English Language support
-- RoomDB for storing POI location
+- [RoomDB](https://developer.android.com/topic/libraries/architecture/room) for storing POI location
 - [Direction API](https://developer.huawei.com/consumer/en/doc/development/HMS-References/hms-map-directions-development) to draw direction on map. Either by car, by walk or by using a bicycle.
 - Around Me feature to find what is around you!
 
